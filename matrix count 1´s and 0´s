@@ -1,0 +1,49 @@
+import java.util.*;
+class matrix
+{
+	public static void main(String args[])
+	{
+		Scanner sc = new Scanner(System.in);
+		int a[]=new int [40];
+		int m,n,c=0,d=0,j=1;
+		int i=0;
+		System.out.println("entire the length and wight of the matrix:");
+		m=sc.nextInt();
+		n=sc.nextInt();
+		for(i=1;i<=(m*n);i++)
+		{
+			a[i]=sc.nextInt();
+			if(a[i]==0)
+			{
+				c=c+1;
+			}
+			if(a[i]==1)
+			{
+				d=d+1;
+			}
+		}
+		for(i=1;i<=(m*n);i++)
+		{
+			if(j==1)
+			{
+				System.out.print("[");
+			}
+			if(j==m+1)
+			{
+				System.out.println("]");
+				System.out.print("["+a[i]);
+				j=2;
+			}
+			else
+			{
+				System.out.print(a[i]);
+				j=j+1;
+			}
+			if(i==(m*n))
+			{
+				System.out.println("]");
+			}
+		}
+		System.out.println("total numbers of 1's:"+d+"   total numbers of 0's:"+c);
+	}
+}
